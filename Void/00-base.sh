@@ -1,10 +1,13 @@
 #!/bin/sh
 
 pkg_list=(
+    NetworkManager
+    network-manager-applet
+    pulseaudio
+    pavucontrol
     firefox
     go
     gparted
-    pacman-contrib
     vim
     neovim
     nano
@@ -20,8 +23,6 @@ pkg_list=(
     bash-completion
     ufw
     gufw
-    xdg-user-dirs-gtk
-    reflector
     mousepad
     geany
     lm_sensors
