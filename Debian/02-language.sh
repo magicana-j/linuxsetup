@@ -1,13 +1,9 @@
 #!/bin/sh
 
 pkg_list=(
-    noto-fonts-cjk
-    noto-fonts-extra
-    noto-fonts-emoji
-    adobe-source-code-pro-fonts
-    fcitx5-im
-    fcitx5-configtool
+    fonts-noto-cjk
     fcitx5-mozc
+    im-config
 )
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
