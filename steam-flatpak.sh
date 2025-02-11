@@ -1,3 +1,3 @@
 #!/bin/sh
-flatpak --user install flathub com.valvesoftware.Steam
-flatpak --user install flathub com.valvesoftware.Steam.CompatibilityTool.Proton
+flatpak install -y flathub com.valvesoftware.Steam
+flatpak install -y flathub com.valvesoftware.Steam.CompatibilityTool.Proton
