@@ -1,7 +1,6 @@
 #!/bin/sh
 
 pkg_list=(
-    firefox
     gparted
     vim
     neovim
