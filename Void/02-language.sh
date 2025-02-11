@@ -1,11 +1,17 @@
 #!/bin/sh
 
 pkg_list=(
+    noto-fonts-ttf
     noto-fonts-cjk
-    noto-fonts-extra
+    noto-fonts-ttf-extra
     noto-fonts-emoji
-    adobe-source-code-pro-fonts
-    fcitx5-im
+    font-adobe-source-code-pro
+    fcitx5
+    fcitx5-gtk+2
+    fcitx5-gtk+3
+    fcitx5-gtk4
+    fcitx5-qt5
+    fcitx5-qt6
     fcitx5-configtool
     fcitx5-mozc
 )
