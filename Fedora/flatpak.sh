@@ -1,9 +1,4 @@
 #!/bin/sh
-echo 'Installing flatpak ...'
-sudo dnf install -y flatpak
-echo 'Adding flathub repository ...'
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
 # Warehouse
 echo 'Installing warehouse ...'
 flatpak install -y flathub io.github.flattool.Warehouse
