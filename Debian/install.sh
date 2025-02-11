@@ -11,7 +11,7 @@ install_packages() {
         if dpkg -l | grep -q -w "$1" &> /dev/null; then
             echo "$1 is installed successfully."
         else
-            echo "$1 is failed to be installed."
+            echo "$1 is failed to be installed." >> $2
         fi
     fi
 }
