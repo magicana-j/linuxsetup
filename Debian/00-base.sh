@@ -2,9 +2,7 @@
 
 pkg_list=(
     firefox
-    go
     gparted
-    pacman-contrib
     vim
     neovim
     nano
@@ -21,7 +19,6 @@ pkg_list=(
     ufw
     gufw
     xdg-user-dirs-gtk
-    reflector
     mousepad
     geany
     lm_sensors
