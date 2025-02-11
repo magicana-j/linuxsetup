@@ -21,14 +21,9 @@ for pkg in "${pkg_list}"; do
     install_packages "$pkg" "$LOG_FILE"
 done
 
+echo 'Setting up input method ...'
+im-config -n fcitx5
+wait 1
 echo "Installation is completed! Log is saved in $(LOG_FILE)."
 
-echo 'Setting up input method ...' && wait 1
 
-cat << EOF >> ~/.xprofile
-export XMODIFIERS=@im=fcitx
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-EOF
-
-echo '*** $HOME/.xprofile has been created.'
