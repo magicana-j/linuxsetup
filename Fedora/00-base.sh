@@ -4,21 +4,13 @@ pkg_list=(
     gparted
     vim
     neovim
-    nano
-    less
     timeshift
     htop
     fastfetch
-    wget
     curl
-    zip
-    unzip
-    xarchiver
     bash-completion
     ufw
     gufw
-    xdg-user-dirs-gtk
-    mousepad
     geany
     lm_sensors
     tmux
