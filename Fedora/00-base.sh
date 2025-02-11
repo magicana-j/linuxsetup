@@ -1,6 +1,7 @@
 #!/bin/sh
 
 pkg_list=(
+    gnome-tweaks
     gparted
     vim
     neovim
