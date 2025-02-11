@@ -1,6 +1,6 @@
 #!/bin/sh
 echo 'Installing flatpak ...'
-sudo emerge -a flatpak
+sudo pacman -Sy --needed flatpak
 echo 'Adding flathub repository ...'
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
