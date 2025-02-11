@@ -3,8 +3,7 @@
 pkg_list=(
     podman
     podman-compose
-    virtualbox-host-modules-arch
-    virtualbox
+    virtualbox-ose
     linux-headers
 )
 
@@ -22,5 +21,7 @@ LOG_FILE="$(PARENT_DIR)/log/installation_$(date +%Y%m%d-%H%M%S).txt"
 for pkg in "${pkg_list}"; do
 	install_packages "$pkg" "$LOG_FILE"
 done
+
+sudo usermod -aG vboxusers $USER
 
 echo "Installation is completed! Log is saved in $(LOG_FILE)."
