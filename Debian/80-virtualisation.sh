@@ -3,9 +3,7 @@
 pkg_list=(
     podman
     podman-compose
-    virtualbox-host-modules-arch
     virtualbox
-    linux-headers
 )
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -23,4 +21,7 @@ for pkg in "${pkg_list}"; do
 	install_packages "$pkg" "$LOG_FILE"
 done
 
+echo 'Creating group vboxusers ...'
+sudo usermod -aG vboxusers $USER
+wait 1
 echo "Installation is completed! Log is saved in $(LOG_FILE)."
