@@ -22,6 +22,8 @@ for pkg in "${pkg_list}"; do
 	install_packages "$pkg" "$LOG_FILE"
 done
 
+echo 'Creating group vboxusers ...'
 sudo usermod -aG vboxusers $USER
+wait 1
 
 echo "Installation is completed! Log is saved in $(LOG_FILE)."
