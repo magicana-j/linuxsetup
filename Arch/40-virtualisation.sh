@@ -1,9 +1,11 @@
 #!/bin/bash
 
 pkgs=(
-    bluez
-    bluez-utils
-    blueman
+	podman
+    podman-compose
+    virtualbox-host-modules-arch
+    virtualbox
+    linux-headers
 )
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -22,8 +24,5 @@ printf "Installing Packages...\n"
 for pkg in "${pkgs[@]}"; do
     install_package "$pkg" "$LOG"
 done
-
-printf " Activating ${YELLOW}Bluetooth${RESET} Services...\n"
-sudo systemctl enable --now bluetooth.service 2>&1 | tee -a "$LOG"
 
 printf "\n%.0s" {1..2}

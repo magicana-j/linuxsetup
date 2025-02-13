@@ -1,6 +1,9 @@
-#!/bin/sh
+#!/bin/bash
 
-pkg_list=(
+pkgs=(
+	ffmpeg
+	openh264
+	vlc
     firefox
     go
     gparted
@@ -29,18 +32,20 @@ pkg_list=(
 )
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+# Change the working directory to the parent directory of the script
 PARENT_DIR="$SCRIPT_DIR/.."
+cd "$PARENT_DIR" || exit 1
 
-if [ ! -d $(PARENT_DIR)/log ]; then
-    mkdir $(PARENT_DIR)/log
-fi
+source "$(dirname "$(readlink -f "$0")")/main.sh"
 
-source "$(SCRIPT_DIR)/install.sh"
+# Set the name of the log file to include the current date and time
+LOG="Install-Logs/install-$(date +%d-%H%M%S)_bluetooth.log"
 
-LOG_FILE="$(PARENT_DIR)/log/installation-base_$(date +%Y%m%d-%H%M%S).txt"
-
-for pkg in "${pkg_list}"; do
-	install_packages "$pkg" "$LOG_FILE"
+# Install
+printf "Installing Packages...\n"
+for pkg in "${pkgs[@]}"; do
+    install_package "$pkg" "$LOG"
 done
 
-echo "Installation is completed! Log is saved in $(LOG_FILE)."
+printf "\n%.0s" {1..2}
