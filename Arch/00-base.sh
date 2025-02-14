@@ -5,7 +5,37 @@ if [ -d log]; then
 fi
 
 pkgs=(
-    
+    bluez
+    bluez-utils
+    blueman
+    ffmpeg
+    openh264
+    vlc
+    firefox
+    go
+    gparted
+    pacman-contrib
+    vim
+    neovim
+    nano
+    less
+    timeshift
+    htop
+    fastfetch
+    wget
+    curl
+    zip
+    unzip
+    xarchiver
+    bash-completion
+    ufw
+    gufw
+    xdg-user-dirs-gtk
+    reflector
+    mousepad
+    geany
+    lm_sensors
+    tmux
 )
 
 printf "Installing Packages...\n"
