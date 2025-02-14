@@ -16,7 +16,7 @@ pkgs=(
 
 printf "Installing Packages...\n"
 for pkg in "${pkgs[@]}"; do
-    sudo pacman -S --needed --noconfirm $pkg 2>&1 || tee -a "log/log-language_$(date +%Y%m%d%H%M%S).txt
+    sudo pacman -S --needed --noconfirm "$pkg" 2>&1 || tee -a "log/log-language_$(date +%Y%m%d-%H%M%S).txt
 done
 
 printf " Setting up fcitx5 ...\n"
