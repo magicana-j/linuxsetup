@@ -1,7 +1,7 @@
 #!/bin/bash
 
 pkgs=(
-	podman
+    podman
     podman-compose
     virtualbox-host-modules-arch
     virtualbox
