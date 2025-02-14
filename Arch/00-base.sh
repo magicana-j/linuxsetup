@@ -10,7 +10,12 @@ pkgs=(
     blueman
     ffmpeg
     openh264
+    gimp
+    inkscape
     vlc
+    shotcut
+    handbrake
+    shotwell
     firefox
     go
     gparted
@@ -26,6 +31,7 @@ pkgs=(
     curl
     zip
     unzip
+    p7zip
     xarchiver
     bash-completion
     ufw
