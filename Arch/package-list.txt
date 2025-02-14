@@ -1,3 +1,6 @@
+bluez
+bluez-utils
+blueman
 ffmpeg
 openh264
 vlc
