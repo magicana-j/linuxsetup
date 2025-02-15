@@ -1,0 +1,11 @@
+dmenu
+i3-wm
+i3blocks
+i3lock
+i3status
+lightdm
+lightdm-gtk-greeter
+lightdm-gtk-greeter-settings
+rofi
+xss-lock
+xterm

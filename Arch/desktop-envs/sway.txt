@@ -1,0 +1,14 @@
+brightnessctl
+dmenu
+dolphin
+foot
+grim
+pavucontrol
+slurp
+sway
+swaybg
+swayidle
+swaylock
+waybar
+wofi
+xorg-xwayland

@@ -1,0 +1,5 @@
+openbox
+tint2
+obconf
+archlinux-xdg-menu
+

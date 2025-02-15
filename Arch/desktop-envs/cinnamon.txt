@@ -1,0 +1,11 @@
+blueman
+bluez-utils
+cinnamon
+engrampa
+gnome-keyring
+gnome-screenshot
+gnome-terminal
+gvfs-smb
+system-config-printer
+xdg-user-dirs-gtk
+xed

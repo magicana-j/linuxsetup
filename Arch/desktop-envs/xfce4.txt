@@ -1,0 +1,6 @@
+gvfs
+lightdm-gtk-greeter-settings
+pavucontrol
+xarchiver
+xfce4
+xfce4-goodies

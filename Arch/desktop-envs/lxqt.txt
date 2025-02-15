@@ -1,0 +1,7 @@
+breeze-icons
+leafpad
+lxqt
+oxygen-icons
+slock
+ttf-freefont
+xdg-utils

@@ -1,0 +1,6 @@
+ark
+dolphin
+kate
+konsole
+plasma-meta
+plasma-workspace
