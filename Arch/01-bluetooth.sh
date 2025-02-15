@@ -71,12 +71,9 @@ uninstall_package() {
 }
 
 pkgs=(
-    fcitx5-im
-    fcitx5-mozc
-    fcitx5-configtool
-    noto-fonts-cjk
-    noto-fonts-emoji
-    noto-fonts-extra
+    bluez
+    bluez-utils
+    blueman
 )
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -94,11 +91,8 @@ for pkg in "${pkgs[@]}"; do
     install_package "$pkg" "$LOG"
 done
 
-printf " Setting up fcitx5 ...\n"
-cat << EOF >> ~/.xprofile
-export XMODIFIERS=@im=fcitx
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-EOF
+printf " Activating ${YELLOW}Bluetooth${RESET} Services...\n"
+sudo systemctl enable --now bluetooth.service 2>&1 | tee -a "$LOG"
+
 
 printf "\n%.0s" {1..2}
