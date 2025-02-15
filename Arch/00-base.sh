@@ -1,5 +1,37 @@
 #!/usr/bin/bash
 
+pkgs=(
+    ffmpeg
+    openh264
+    vlc
+    firefox
+    go
+    gparted
+    pacman-contrib
+    vim
+    neovim
+    nano
+    less
+    timeshift
+    htop
+    fastfetch
+    wget
+    curl
+    zip
+    unzip
+    xarchiver
+    xf86-input-synaptics
+    bash-completion
+    ufw
+    gufw
+    xdg-user-dirs-gtk
+    reflector
+    mousepad
+    geany
+    lm_sensors
+    tmux
+)
+
 set -e
 
 ISAUR=$(command -v yay || command -v paru)
@@ -70,36 +102,6 @@ uninstall_package() {
     return 0
 }
 
-pkgs=(
-    ffmpeg
-    openh264
-    vlc
-    firefox
-    go
-    gparted
-    pacman-contrib
-    vim
-    neovim
-    nano
-    less
-    timeshift
-    htop
-    fastfetch
-    wget
-    curl
-    zip
-    unzip
-    xarchiver
-    bash-completion
-    ufw
-    gufw
-    xdg-user-dirs-gtk
-    reflector
-    mousepad
-    geany
-    lm_sensors
-    tmux
-)
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
@@ -115,5 +117,7 @@ printf "Installing Packages...\n"
 for pkg in "${pkgs[@]}"; do
     install_package "$pkg" "$LOG"
 done
+
+source ./yay-setup.sh
 
 printf "\n%.0s" {1..2}

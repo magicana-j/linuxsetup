@@ -1,5 +1,15 @@
 #!/usr/bin/bash
 
+pkgs=(
+    fcitx5-im
+    fcitx5-mozc
+    fcitx5-configtool
+    noto-fonts-cjk
+    noto-fonts-emoji
+    noto-fonts-extra
+)
+
+
 set -e
 
 ISAUR=$(command -v yay || command -v paru)
@@ -69,21 +79,6 @@ uninstall_package() {
     
     return 0
 }
-
-pkgs=(
-    fcitx5-im
-    fcitx5-mozc
-    fcitx5-configtool
-    noto-fonts-cjk
-    noto-fonts-emoji
-    noto-fonts-extra
-)
-
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
-# Change the working directory to the parent directory of the script
-PARENT_DIR="$SCRIPT_DIR/.."
-cd "$PARENT_DIR" || exit 1
 
 # Set the name of the log file to include the current date and time
 LOG="Install-Logs/install-$(date +%d-%H%M%S)_bluetooth.log"
